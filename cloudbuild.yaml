@@ -12,3 +12,5 @@ steps:
   - '-c'
   - |
   - echo "My project"
+options:
+  logging: CLOUD_LOGGING_ONLY
