@@ -23,7 +23,7 @@ steps:
       echo "Build completed at $(date)" >> build-status.txt
       git add build-status.txt
       git commit -m "Update build status [skip ci]"
-      git push origin HEAD:refs/heads/status
+      git push origin gcp-project
       git checkout master
 options:
   logging: CLOUD_LOGGING_ONLY
