@@ -5,3 +5,10 @@ steps:
   - '-c'
   - |
   - echo "Intializing the build for the $PROJECT_ID"
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  id: 'step2'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+  - echo "My project"
