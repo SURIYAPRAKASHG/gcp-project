@@ -12,5 +12,18 @@ steps:
   - '-c'
   - |
   - echo "My project"
+- name: "gcr.io/cloud-builders/git"
+  entrypoint: "sh"
+  args:
+    - "-c"
+    - |
+      git config --global user.email "suriyagsp1@gmail.com"
+      git config --global user.name "SURIYAPRAKASHG"
+      git checkout -b status
+      echo "Build completed at $(date)" >> build-status.txt
+      git add build-status.txt
+      git commit -m "Update build status [skip ci]"
+      git push origin HEAD:refs/heads/status
+      git checkout master
 options:
   logging: CLOUD_LOGGING_ONLY
