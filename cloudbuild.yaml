@@ -4,7 +4,7 @@ steps:
   args:
   - '-c'
   - |
-  - echo 'Intializing the build for the $PROJECT_ID'
+  - echo "Intializing the build for the $PROJECT_ID"
 
 options:
   logging: CLOUD_LOGGING_ONLY
